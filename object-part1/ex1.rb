@@ -32,7 +32,7 @@ class MyCar
 		puts "speed set to zero speed now:#{speed}"
 	end
 
-	def change_color(color)
+	def spray_paint(color)
 
 		@color=color
 
@@ -52,5 +52,7 @@ car = MyCar.new(1976,"black","fly",0)
 car.speed_up(20)
 car.brake(10)
 car.shut
-car.change_color("white")
+car.color = "white"
+puts car.color
 car.view_year
+car.spray_paint("red")
