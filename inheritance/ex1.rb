@@ -101,14 +101,7 @@ class MyTruck < Vehicle
 end
 
 
-
-
-car = MyCar.new("amazing")
-
-car2 =MyTruck.new(10)
-
-puts Vehicle.howmany
-
-car.wheretobuy
-
+puts MyCar.ancestors
+puts MyTruck.ancestors
+puts Vehicle.ancestors
 
