@@ -68,13 +68,21 @@ class Vehicle
 
 end
 
+module Vendor
 
+	def wheretobuy
+		puts "Taipei"
+	end
+
+
+end
 
 class MyCar < Vehicle
 
+	include Vendor
 	
 	def initialize(secret)
-
+		
 		@secret=secret
 		puts "#{secret} in this car"
 
@@ -92,8 +100,15 @@ class MyTruck < Vehicle
 	end
 end
 
+
+
+
 car = MyCar.new("amazing")
 
 car2 =MyTruck.new(10)
 
 puts Vehicle.howmany
+
+car.wheretobuy
+
+
