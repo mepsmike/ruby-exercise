@@ -52,8 +52,18 @@ class MyCar
 
 	end
 
+	def to_s
+
+		puts "my car is #{@year} , #{@color}, #{@model}"
+
+	end
+
 end
 
 
 
 MyCar.cal(10,100)
+
+car=MyCar.new(1999,"red","fly",20)
+
+puts car
