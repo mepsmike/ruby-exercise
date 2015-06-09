@@ -1,5 +1,7 @@
 class Vehicle
 
+	@@Vehiclenumber =0
+
 	attr_accessor :speed ,:color
 
 	attr_reader :year
@@ -9,7 +11,7 @@ class Vehicle
 		@color = color
 		@model =model
 		@speed = speed
-		
+		@@number+=1
 	end
 
 	def speed_up(up)
@@ -52,6 +54,12 @@ class Vehicle
 
 	end
 
+	def self.howmany
+
+		puts "number of vehicle #{@@Vehiclenumber}"
+
+	end 
+
 	def to_s
 
 		puts "my car is #{@year} , #{@color}, #{@model}"
@@ -64,6 +72,7 @@ end
 
 class MyCar < Vehicle
 
+	
 	def initialize(secret)
 
 		@secret=secret
@@ -86,3 +95,5 @@ end
 car = MyCar.new("amazing")
 
 car2 =MyTruck.new(10)
+
+puts Vehicle.howmany
